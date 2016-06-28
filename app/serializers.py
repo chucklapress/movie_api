@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from app.models import Movie, Review
+from app.models import Movie, Review, Rater
 
 
 
@@ -14,4 +14,10 @@ class ReviewSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Review
-        fields = ('rater','movie','rating','timestamp')
+        fields = ('id','rater','movie','rating','timestamp')
+
+class RaterSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Rater
+        fields = ('id','age','gender','occupation','zipcode')
