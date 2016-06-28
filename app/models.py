@@ -5,6 +5,7 @@ class Rater(models.Model):
     gender = models.CharField(max_length=10)
     occupation = models.CharField(max_length=50)
     zipcode = models.CharField (max_length=10)
+
     def __str__(self):
         return self.occupation
 
@@ -42,7 +43,6 @@ class Review(models. Model):
     movie = models.ForeignKey(Movie)
     rating = models.IntegerField()
     timestamp = models.IntegerField()
-
 
     def __str__(self):
         return self.movie.movie_title

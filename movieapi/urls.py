@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from app.views import MovieListAPIView, ReviewListAPIView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^movies/$', MovieListAPIView.as_view(), name="movie_list_api_view"),
+    url(r'^reviews/$', ReviewListAPIView.as_view(), name="review_list_api_view")
 ]
