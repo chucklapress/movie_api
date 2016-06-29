@@ -8,7 +8,7 @@ class MovieListAPIView(generics.ListCreateAPIView):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
 
-class MovieDetailAPIView(generics.RetrieveUpdateAPIView):
+class MovieDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
 
@@ -16,7 +16,7 @@ class ReviewListAPIView(generics.ListCreateAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
 
-class ReviewDetailAPIView(generics.RetrieveUpdateAPIView):
+class ReviewDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
 
@@ -24,6 +24,6 @@ class RaterListAPIView(generics.ListCreateAPIView):
     queryset = Rater.objects.all()
     serializer_class = RaterSerializer
 
-class RaterDetailAPIView(generics.ListCreateAPIView):
+class RaterDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Rater.objects.all()
     serializer_class = RaterSerializer
