@@ -2,8 +2,11 @@ from django.shortcuts import render
 from rest_framework import generics
 from app.models import Movie, Review, Rater
 from app.serializers import MovieSerializer, ReviewSerializer, RaterSerializer
+from django.views.generic import TemplateView
 
 # Create your views here.
+class IndexView(TemplateView):
+    template_name = 'index.html'
 
 class MovieListAPIView(generics.ListCreateAPIView):
     queryset = Movie.objects.all()

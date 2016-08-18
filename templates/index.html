@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie API app</title>
+    <link rel = "stylesheet" href ={% static "app/css/bootstrap.css"%}>
+    <div class="container">
+      <nav class="navbar navbar-default navbar-fixed-top">
+          <a href="{% url 'index_view'%}">Home</a>
+          <a href= "{% url 'movie_list_api_view' %}">Movie API</a>
+          <a href="{%url 'review_list_api_view'%}">Review API</a>
+          <a href="{%url 'rater_list_api_view'%}">Rater API</a>
+    </div>
+  </head>
+
+  <body>
+
+
+  <div class="container">
+    <br>
+    <br>
+    <h4>This is the basic Index page </h4>
+    <br>
+    <h5>All API connections are available at:</h5>
+    <h5> /movies</h5>
+    <h5>/reviews</h5>
+    <h5>/raters</h5>
+    <h5>with details of each at #/#/index number</h5>
+  </div>
+
+  </body>
+</html>
